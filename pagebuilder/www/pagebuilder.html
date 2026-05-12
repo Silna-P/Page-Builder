@@ -1,0 +1,19 @@
+{% extends "templates/web.html" %}
+{% block title %}Page Builder{% endblock %}
+{% block head_include %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .navbar,.web-footer,footer,nav.navbar{display:none!important;}
+  body{margin:0;padding:0;background:#0a0a14;}
+  #pagebuilder-root{min-height:100vh;}
+</style>
+{% endblock %}
+{% block page_content %}
+<div id="pagebuilder-root"></div>
+{% endblock %}
+{% block script %}
+<script>
+  window.csrf_token = "{{ frappe.session.csrf_token }}";
+</script>
+<script type="text/javascript" src="/assets/pagebuilder/dist/pagebuilder.bundle.XWPJZBGH.js"></script>
+{% endblock %}
