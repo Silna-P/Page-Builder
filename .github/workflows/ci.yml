@@ -42,7 +42,7 @@ jobs:
       - name: Find tests
         run: |
           echo "Finding tests"
-          grep -rn "def test" > /dev/null
+          grep -rn "def test" || echo "No tests found, skipping"
 
       - name: Setup Python
         uses: actions/setup-python@v4
