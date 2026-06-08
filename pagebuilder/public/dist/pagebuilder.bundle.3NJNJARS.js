@@ -24802,10 +24802,11 @@
   }
 
   // ../pagebuilder/pagebuilder/public/js/pagebuilder.bundle.jsx
-  var el = document.getElementById("pagebuilder-root");
-  if (el) {
-    (0, import_client.createRoot)(el).render(/* @__PURE__ */ import_react2.default.createElement(import_react2.default.StrictMode, null, /* @__PURE__ */ import_react2.default.createElement(PageBuilder, null)));
-  }
+  frappe.ready(() => {
+    const el = document.getElementById("pagebuilder-root");
+    if (el)
+      (0, import_client.createRoot)(el).render(/* @__PURE__ */ import_react2.default.createElement(PageBuilder, null));
+  });
 })();
 /**
  * @license React
@@ -24847,4 +24848,4 @@
  * @internal
  * @license Modernizr 3.0.0pre (Custom Build) | MIT
  */
-//# sourceMappingURL=pagebuilder.bundle.YBCOKKLK.js.map
+//# sourceMappingURL=pagebuilder.bundle.3NJNJARS.js.map
